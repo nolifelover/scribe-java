@@ -109,6 +109,13 @@ public class OAuth10aServiceImpl implements OAuthService
     config.log("response body: " + body);
     return api.getAccessTokenExtractor().extract(body);
   }
+  
+  /**
+   * {@inheritDoc}
+   */
+  public Token refreshAccessToken(Token accessToken) {
+    throw new UnsupportedOperationException("Refresh token is not supported in Scribe OAuth 1.0");
+  }
 
   /**
    * {@inheritDoc}
